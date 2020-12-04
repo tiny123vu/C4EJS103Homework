@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://media.healthyfood.com/wp-content/uploads/2017/01/Food-for-thought-Fill-up-on-fibre-iStock-516957556-300x300.jpg" id="randomimg">
+    <button onclick="random_image()" value="Random Image"></button>\
+    <script>
+        function random_image(){
+            let theImages =[{
+                src:"http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+                width: "240",
+                height: "160",
+            }, {
+                src: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+                width: "320",
+                height: "195",
+            }, {
+                src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+                width: "500",
+                height: "343",
+            }];
+            let random_img = document.getElementById("randomimg");
+            random_img.src = theImages[Math.floor(Math.random()*theImages.length)]; 
+        }
+    </script>
+</body>
+</html>
